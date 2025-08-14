@@ -1,0 +1,119 @@
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:rowCount="2"
+    android:padding="16dp"
+
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <!-- Text -->
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/border_background"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:contentDescription="Text Icon"
+            android:src="@drawable/text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="8dp"
+            android:text="Text"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Voice -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:layout_margin="15dp"
+
+        android:background="@drawable/border_background"
+        android:padding="16dp">
+        <ImageView
+            android:src="@drawable/voice"
+            android:contentDescription="Voice Icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:text="Voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="8dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Camera -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:background="@drawable/border_background"
+        android:padding="16dp">
+        <ImageView
+            android:src="@drawable/capture"
+            android:contentDescription="Camera Icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:text="Camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="8dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Handwriting -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:background="@drawable/border_background"
+        android:padding="16dp">
+        <ImageView
+            android:src="@drawable/quiz"
+            android:contentDescription="Handwriting Icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:text="Quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="8dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</GridLayout>

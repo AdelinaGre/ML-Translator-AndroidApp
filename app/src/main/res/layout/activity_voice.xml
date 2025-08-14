@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:descendantFocusability="beforeDescendants"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".VoiceActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="409dp"
+        android:layout_height="156dp"
+        android:background="@drawable/translator_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/backgroundImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/blackbkg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/gif_wave"
+                android:layout_width="239dp"
+                android:layout_height="91dp"
+                android:layout_marginTop="16dp"
+                android:scaleX="1.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/wave" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Spinner and Swap Button -->
+
+    <!-- Input Text -->
+
+    <!-- Translate Button -->
+
+    <!-- Output Text -->
+
+    <!-- Logout Button -->
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="413dp"
+        android:layout_height="81dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <Spinner
+            android:id="@+id/idFromSpinner"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_text_box"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/swapButton"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/swap_languages"
+            android:src="@drawable/ic_right_arrow" />
+
+        <Spinner
+            android:id="@+id/idToSpinner"
+            android:layout_width="100dp"
+            android:layout_height="81dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_text_box"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/idEdtSource"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_edittext"
+        android:hint="Source Text"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/idBtnTranslate"
+        android:layout_width="166dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="130dp"
+        android:backgroundTint="@color/black"
+        android:padding="10dp"
+        android:text="Translate"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idScroll"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:id="@+id/idScroll"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_edittext"
+        android:fillViewport="true"
+        android:hint="Source Text"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtSource">
+
+        <TextView
+            android:id="@+id/idTVTranslatedTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+
+
+            android:scrollbars="vertical"
+            android:text="Translated Text" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/idIVMic"
+        android:layout_width="147dp"
+        android:layout_height="91dp"
+        app:layout_constraintBottom_toTopOf="@+id/idBtnTranslate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idScroll"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/microphone" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bkg"
+        android:elevation="2dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnTranslate"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/nav_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

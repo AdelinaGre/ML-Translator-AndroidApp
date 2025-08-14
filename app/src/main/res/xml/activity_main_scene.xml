@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="368dp"
+            android:layout_height="122dp"
+            motion:layout_constraintTop_toBottomOf="@+id/idFromLang"
+            motion:layout_constraintHorizontal_bias="0.488"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:id="@+id/idEdtSource"
+            android:layout_marginStart="16dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="388dp"
+            android:layout_height="218dp"
+            motion:layout_constraintBottom_toTopOf="@+id/idIVMic"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/idScroll"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toBottomOf="@+id/idSpeech" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="108dp"
+            android:layout_height="66dp"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintBottom_toTopOf="@+id/idBtnTranslate"
+            motion:layout_constraintHorizontal_bias="0.419"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/idIVMic"
+            motion:layout_constraintTop_toBottomOf="@+id/idScroll"
+            android:layout_marginTop="54dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="266dp"
+            android:layout_height="66dp"
+            android:layout_marginBottom="40dp"
+            motion:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            motion:layout_constraintHorizontal_bias="0.496"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/idBtnTranslate"
+            motion:layout_constraintTop_toBottomOf="@+id/idIVMic"
+            android:layout_marginTop="19dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+    </ConstraintSet>
+</MotionScene>

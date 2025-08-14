@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:descendantFocusability="beforeDescendants"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi, Name"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.312" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="148dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/black"
+        android:padding="12dp"
+        android:text="Log Out"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="218dp"
+        android:background="@drawable/blackbkg"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="70dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="168dp"
+            android:layout_marginEnd="173dp"
+            android:layout_marginBottom="105dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/translation" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+
+        android:columnCount="2"
+        android:gravity="center"
+        android:padding="16dp"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <!-- Text -->
+        <LinearLayout
+            android:id="@+id/layout_text"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/border_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:contentDescription="Text Icon"
+                android:src="@drawable/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:text="Text"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_voice"
+
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/border_background"
+            android:gravity="center"
+
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:contentDescription="Voice Icon"
+                android:src="@drawable/voice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:text="Voice"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_camera"
+
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/border_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:contentDescription="Camera Icon"
+                android:src="@drawable/capture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:text="Camera"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_quiz"
+
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/border_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:contentDescription="Handwriting Icon"
+                android:src="@drawable/quiz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:text="Quiz"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bkg"
+        android:elevation="2dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/nav_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

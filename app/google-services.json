@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "945916484752",
+    "project_id": "translator-a11b0",
+    "storage_bucket": "translator-a11b0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945916484752:android:cb1e53cd55b06645744c15",
+        "android_client_info": {
+          "package_name": "com.example.translator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5CN1gcp0H60eOGLCwLnx15SSajXYMyIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
